@@ -6,18 +6,22 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4">
-        <Link href="/" className="flex w-fit items-center gap-2">
+    <header className="border-b border-zinc-200 bg-white font-sans dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:grid sm:grid-cols-[1fr_auto_1fr] sm:px-6 lg:px-8">
+        <Link
+          href="/"
+          aria-label="Página inicial do Cellbit VODs"
+          className="flex w-fit items-center gap-2"
+        >
           <Image
             src="/logo-cellbit.png"
-            alt="Logo Cellbit"
+            alt=""
             width={36}
             height={36}
             sizes="36px"
             className="h-9 w-9 rounded-full object-cover invert dark:invert-0"
           />
-          <span className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+          <span className="hidden text-lg font-semibold text-zinc-900 sm:inline dark:text-zinc-100">
             Cellbit VODs
           </span>
         </Link>
@@ -28,12 +32,16 @@ export default function Header() {
             aria-current="page"
             className="flex items-center gap-2 rounded-md bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-900 transition-colors hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
           >
-            <VideoIcon height="1.7em" style={{ color: "white" }} />
+            <VideoIcon
+              aria-hidden="true"
+              height="1.7em"
+              className="text-zinc-700 dark:text-zinc-200"
+            />
             <span>VODs</span>
           </Link>
         </nav>
 
-        <div aria-hidden="true" />
+        <div aria-hidden="true" className="hidden sm:block" />
       </div>
     </header>
   );
