@@ -16,8 +16,8 @@ export default function Footer() {
         </Link>
       </p>
       <p className="mt-2 text-xs">
-        Esse projeto não tem envolvimento direto ou relação com o Cellbit. É um
-        projeto de fã para fãs.
+        Esse projeto não tem envolvimento direto ou relação oficial com o
+        Cellbit ou com seus projetos. É um projeto de fã para fãs.
       </p>
       <p className="mt-2 text-xs">
         {commitSha ? (
